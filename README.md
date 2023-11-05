@@ -1,1 +1,1 @@
-# owasp-top10-java
+# OWASP Top 10
