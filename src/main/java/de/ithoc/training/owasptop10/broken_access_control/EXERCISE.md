@@ -1,4 +1,5 @@
 # Exercise: Broken Access Control
+
 ## Goal
 Identify the following vulnerabilities in the code enclosed in class ```BrokenAccessControl``` 
 and describe how they can be exploited.
