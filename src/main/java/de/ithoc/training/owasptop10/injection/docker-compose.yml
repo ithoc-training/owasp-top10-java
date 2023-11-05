@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  java-injection-db:
+    image: postgres:15.4
+    container_name: java-injection-db
+    ports:
+      - "5433:5432"
+    env_file:
+      - .env
+    volumes:
+      - ~/ws/olihock/ithoc-training/cyber-security/injectiondb-volume:/var/lib/postgresql/data
