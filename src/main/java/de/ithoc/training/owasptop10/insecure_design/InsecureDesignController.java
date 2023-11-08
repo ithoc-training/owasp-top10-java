@@ -9,7 +9,7 @@ import java.util.List;
 
 
 @RestController
-public class InsecureDesign {
+public class InsecureDesignController {
 
     private final Account accountUserA;
 
@@ -18,7 +18,7 @@ public class InsecureDesign {
     private final AccountService accountService;
 
 
-    public InsecureDesign(Account accountUserA, Account accountUserB, AccountService accountService) {
+    public InsecureDesignController(Account accountUserA, Account accountUserB, AccountService accountService) {
         this.accountUserA = accountUserA;
         this.accountUserB = accountUserB;
         this.accountService = accountService;
