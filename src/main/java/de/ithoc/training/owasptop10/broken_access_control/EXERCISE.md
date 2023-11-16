@@ -13,13 +13,9 @@ User data is stored in text files in the ```data``` directory.
 ## Vulnerabilities
 
 1. Broken Access Control
-2. Parameter Tampering
-3. Insecure Direct Object References (IDOR)
-4. Missing Access Controls for POST, PUT, DELETE
-5. Elevation of Privilege
-6. Metadata Manipulation
-7. CORS Misconfiguration
-8. Force Browsing
+2. Cryptographic Failures
+3. Injection
+4. Insecure Design
 
 ## Ressource
 ```shell
