@@ -8,7 +8,10 @@ import java.math.BigDecimal;
 public class AccountService {
 
 
-    public void transferFunds(User user, Account fromAccount, Account toAccount, BigDecimal amount) {
+    public void transferFunds(User user,
+                              Account fromAccount,
+                              Account toAccount,
+                              BigDecimal amount) {
 
         if (user.isLoggedIn()) {
             performTransfer(fromAccount, toAccount, amount);
@@ -16,7 +19,8 @@ public class AccountService {
     }
 
 
-    private void performTransfer(Account from, Account to, BigDecimal amount) {
+    private void performTransfer(Account from, Account to,
+                                 BigDecimal amount) {
 
         // withdraw from
         from.setBalance(from.getBalance().subtract(amount));

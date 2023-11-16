@@ -34,7 +34,7 @@ public class Injection {
     @PostConstruct
     public void init() {
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 3; i++) {
             Customer customer = new Customer();
             customer.setEmail(UUID.randomUUID() + "@example.com");
             customer.setTurnover(new Random().nextInt(10000));

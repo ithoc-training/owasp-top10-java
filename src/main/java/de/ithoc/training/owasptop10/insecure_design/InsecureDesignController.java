@@ -9,7 +9,7 @@ import java.util.List;
 
 
 @RestController
-public class InsecureDesign {
+public class InsecureDesignController {
 
     private final Account accountUserA;
 
@@ -18,7 +18,7 @@ public class InsecureDesign {
     private final AccountService accountService;
 
 
-    public InsecureDesign(Account accountUserA, Account accountUserB, AccountService accountService) {
+    public InsecureDesignController(Account accountUserA, Account accountUserB, AccountService accountService) {
         this.accountUserA = accountUserA;
         this.accountUserB = accountUserB;
         this.accountService = accountService;
@@ -26,15 +26,16 @@ public class InsecureDesign {
 
 
     @PostMapping("/insecure-design")
-    public ResponseEntity<List<Booking>> post(@RequestBody InsecureDesignRequestBody requestBody) {
+    public ResponseEntity<List<Booking>> post(
+            @RequestBody InsecureDesignRequestBody requestBody) {
 
         Account fromAccount = accountByIban(requestBody.getFromIban());
         Account toAccount = accountByIban(requestBody.getToIban());
-        accountService.transferFunds(requestBody.getUser(), fromAccount, toAccount, requestBody.getAmount());
+        accountService.transferFunds(requestBody.getUser(),
+                fromAccount, toAccount, requestBody.getAmount());
 
         return ResponseEntity.ok(fromAccount.getBookings());
     }
-
 
     private Account accountByIban(String iban) {
 

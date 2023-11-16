@@ -35,7 +35,7 @@ public class BrokenAccessControl {
     public ResponseEntity<String> post(@RequestBody UserDto userDto) throws IOException {
 
         File userFile = fileService.readFile(userDto.getUserId());
-        FileOutputStream fileOutputStream = new FileOutputStream(userFile, false);
+        FileOutputStream fileOutputStream = new FileOutputStream(userFile + ".txt", false);
         fileOutputStream.write(userDto.getData().getBytes());
         fileOutputStream.close();
 
